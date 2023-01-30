@@ -3,14 +3,16 @@
   import Linha from "./Linha.svelte";
   import Tela from "./Tela.svelte";
 
+  let valor = '0'
+
   function numeroDigitado(numero: string){
-    console.log(numero)
+    valor += numero;
   }
 </script>
 
 <div class="calculadora">
 
-    <Tela valor="0123401234567890123456789012345678956789" />
+    <Tela valor={valor} />
     
     <Linha>
         <Botao destaque triplo texto="AC"/>
